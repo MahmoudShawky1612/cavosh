@@ -2,9 +2,9 @@ import 'package:flutter/cupertino.dart';
 
 import '../utils/text.dart';
 
-class HeaderText extends StatelessWidget{
+class CustomHeaderText extends StatelessWidget{
   final String text;
-  const HeaderText({super.key, required this.text });
+  const CustomHeaderText({super.key, required this.text });
   @override
   Widget build(BuildContext context) {
     return  Positioned(

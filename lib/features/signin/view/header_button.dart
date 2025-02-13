@@ -4,8 +4,11 @@ import 'package:flutter/material.dart';
 
 import '../../../core/constants/colors.dart';
 import '../../../core/widgets/custom_button.dart';
+import '../../signup/view/sign_up_screen.dart';
 
-class RegisteringButton extends StatelessWidget{
+class SignInHeaderButton extends StatelessWidget{
+  const SignInHeaderButton({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Positioned(
@@ -19,10 +22,10 @@ class RegisteringButton extends StatelessWidget{
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             CustomButton(text: "Sign In", onPressed: () {
-              Navigator.push(context, MaterialPageRoute(builder: (context) => const SignInScreen()));
-            }, topRight: 0, bottomRight: 0, color: AppColors.button),
+            }, topRight: 0, bottomRight: 0, color: AppColors.primary),
             CustomButton(text: "Sign Up", onPressed: () {
-            }, topLeft: 0, bottomLeft: 0, color: AppColors.primary,),
+              Navigator.push(context, MaterialPageRoute(builder: (context) => const SignUpScreen()));
+            }, topLeft: 0, bottomLeft: 0, color: AppColors.button,),
           ],
         ),
       ),
