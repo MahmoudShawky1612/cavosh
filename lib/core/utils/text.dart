@@ -6,7 +6,7 @@ import '../constants/colors.dart';
 class AppTextStyles{
 
   static const headLine = TextStyle(
-    fontSize: 24,
+    fontSize: 28,
     fontWeight: FontWeight.bold,
     fontFamily: 'Roboto',
     fontFeatures: [FontFeature.enable('smcp')],
