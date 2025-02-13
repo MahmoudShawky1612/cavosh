@@ -10,5 +10,7 @@ class AppColors{
   static const button = Color(0xFF002131);
   static const black = Color(0xFF000000);
 
+  static const gray = Color(0xFFBDBDBD);
+
 
 }
