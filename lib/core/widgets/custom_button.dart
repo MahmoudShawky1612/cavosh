@@ -7,12 +7,20 @@ class CustomButton extends StatelessWidget {
   final String text;
   final Function onPressed;
   final Color color;
+  final double topLeft;
+  final double bottomRight;
+  final double topRight;
+  final double bottomLeft;
 
   const CustomButton({
     super.key,
     required this.text,
     required this.onPressed,
     this.color = AppColors.button,
+     this.topLeft =20,
+     this.bottomRight =20,
+     this.topRight =20 ,
+     this.bottomLeft=20,
   });
 
   @override
@@ -22,7 +30,12 @@ class CustomButton extends StatelessWidget {
         backgroundColor: color,
         foregroundColor: AppColors.white,
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(15),
+          borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(topLeft),
+            bottomRight: Radius.circular(bottomRight),
+            topRight: Radius.circular(topRight),
+            bottomLeft: Radius.circular(bottomLeft),
+          ),
         ),
       ),
       onPressed: () => onPressed(),
