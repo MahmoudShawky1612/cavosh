@@ -6,7 +6,7 @@ import '../../../core/constants/colors.dart';
 import '../../../core/widgets/custom_button.dart';
 import '../../signup/view/sign_up_screen.dart';
 
-class SignInHeaderButton extends StatelessWidget{
+class SignInHeaderButton extends StatelessWidget {
   const SignInHeaderButton({super.key});
 
   @override
@@ -21,15 +21,47 @@ class SignInHeaderButton extends StatelessWidget{
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            CustomButton(text: "Sign In", onPressed: () {
-            }, topRight: 0, bottomRight: 0, color: AppColors.primary),
-            CustomButton(text: "Sign Up", onPressed: () {
-              Navigator.push(context, MaterialPageRoute(builder: (context) => const SignUpScreen()));
-            }, topLeft: 0, bottomLeft: 0, color: AppColors.button,),
+            CustomButton(
+              text: "Sign In",
+              onPressed: () {
+              },
+              topRight: 0,
+              bottomRight: 0,
+              color: AppColors.primary,
+            ),
+            CustomButton(
+              text: "Sign Up",
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  PageRouteBuilder(
+                    transitionDuration: const Duration(milliseconds: 500),
+                    pageBuilder: (context, animation, secondaryAnimation) =>
+                    const SignUpScreen(),
+                    transitionsBuilder:
+                        (context, animation, secondaryAnimation, child) {
+                      const begin = Offset(1.0, 0.0); // Slide from right
+                      const end = Offset.zero;
+                      const curve = Curves.easeInOut;
+
+                      var tween = Tween(begin: begin, end: end)
+                          .chain(CurveTween(curve: curve));
+
+                      return SlideTransition(
+                        position: animation.drive(tween),
+                        child: child,
+                      );
+                    },
+                  ),
+                );
+              },
+              topLeft: 0,
+              bottomLeft: 0,
+              color: AppColors.button,
+            ),
           ],
         ),
       ),
     );
   }
-
 }
