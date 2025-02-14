@@ -64,11 +64,16 @@ class _MainScreenState extends State<MainScreen> {
                   selectedFontSize: 12,
                   unselectedFontSize: 12,
                   items: [
-                    _buildNavItem(Icons.home_rounded, Icons.home_outlined, "Home"),
-                    _buildNavItem(Icons.restaurant_menu_rounded, Icons.restaurant_menu_outlined, "Menu"),
-                    _buildNavItem(Icons.favorite_rounded, Icons.favorite_outline_rounded, "Favorites"),
-                    _buildNavItem(Icons.person_rounded, Icons.person_outline_rounded, "Profile"),
-                    _buildNavItem(Icons.shopping_cart_rounded, Icons.shopping_cart_outlined, "Cart"),
+                    _buildNavItem(
+                        Icons.home_rounded, Icons.home_outlined, "Home"),
+                    _buildNavItem(Icons.restaurant_menu_rounded,
+                        Icons.restaurant_menu_outlined, "Menu"),
+                    _buildNavItem(Icons.favorite_rounded,
+                        Icons.favorite_outline_rounded, "Favorites"),
+                    _buildNavItem(Icons.person_rounded,
+                        Icons.person_outline_rounded, "Profile"),
+                    _buildNavItem(Icons.shopping_cart_rounded,
+                        Icons.shopping_cart_outlined, "Cart"),
                   ],
                 ),
               ),
@@ -79,7 +84,8 @@ class _MainScreenState extends State<MainScreen> {
     );
   }
 
-  BottomNavigationBarItem _buildNavItem(IconData selectedIcon, IconData unselectedIcon, String label) {
+  BottomNavigationBarItem _buildNavItem(
+      IconData selectedIcon, IconData unselectedIcon, String label) {
     return BottomNavigationBarItem(
       icon: AnimatedSwitcher(
         duration: const Duration(milliseconds: 200),
