@@ -9,7 +9,7 @@ class TextFields extends StatelessWidget{
   Widget build(BuildContext context) {
     return Column(
       children: [
-        CustomTextField(text: "Email", prefixIcon: Icon(Icons.person), prefixIconColor: AppColors.primary,),
+        CustomTextField(text: "Email", prefixIcon: Icon(Icons.email), prefixIconColor: AppColors.primary,),
         SizedBox(height: 30,),
         CustomTextField(text: "Password", prefixIcon: Icon(Icons.password_rounded), prefixIconColor: AppColors.primary, suffixIcon: Icons.remove_red_eye_outlined, isPassword: true,),
       ],

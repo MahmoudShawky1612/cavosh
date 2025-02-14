@@ -1,7 +1,6 @@
 import 'package:cavosh/features/signin/view/sign_in_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
 import '../../../core/constants/colors.dart';
 import '../../../core/widgets/custom_button.dart';
 
@@ -13,9 +12,9 @@ class SignUpHeaderButton extends StatelessWidget{
     return Positioned(
       top: 170,
       left: 0,
-      right: 0, // Ensure it takes full width
+      right: 0,
       child: SizedBox(
-        width: double.infinity, // Forces the Row to take full width
+        width: double.infinity,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -29,7 +28,7 @@ class SignUpHeaderButton extends StatelessWidget{
                   const SignInScreen(),
                   transitionsBuilder:
                       (context, animation, secondaryAnimation, child) {
-                    const begin = Offset(-1.0, 0.0); // Slide from right
+                    const begin = Offset(-1.0, 0.0);
                     const end = Offset.zero;
                     const curve = Curves.easeInOut;
                     var tween = Tween(begin: begin, end: end)
