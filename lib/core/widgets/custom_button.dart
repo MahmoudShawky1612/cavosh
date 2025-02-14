@@ -17,10 +17,10 @@ class CustomButton extends StatelessWidget {
     required this.text,
     required this.onPressed,
     this.color = AppColors.button,
-     this.topLeft =20,
-     this.bottomRight =20,
-     this.topRight =20 ,
-     this.bottomLeft=20,
+    this.topLeft = 20,
+    this.bottomRight = 20,
+    this.topRight = 20,
+    this.bottomLeft = 20,
   });
 
   @override

@@ -16,7 +16,7 @@ import '../../../core/utils/text.dart';
 import 'forgot_password.dart';
 import 'header_button.dart';
 
-class SignInScreen extends StatefulWidget { 
+class SignInScreen extends StatefulWidget {
   const SignInScreen({super.key});
 
   @override
@@ -24,21 +24,24 @@ class SignInScreen extends StatefulWidget {
 }
 
 class _SignInScreenState extends State<SignInScreen> {
-  int currentIndex=0;
+  int currentIndex = 0;
+
   @override
   Widget build(BuildContext context) {
-    return  GestureDetector(
-      onTap: (){
+    return GestureDetector(
+      onTap: () {
         FocusScope.of(context).unfocus();
       },
-      child:  Scaffold(
+      child: const Scaffold(
         body: Stack(
           children: [
-            const CustomHeader(),
-            const CustomHeaderText(text: "Let's get you signed in!s",),
-            const SignInHeaderButton(),
+            CustomHeader(),
+            CustomHeaderText(
+              text: "Let's get you signed in!s",
+            ),
+            SignInHeaderButton(),
             Padding(
-              padding: const EdgeInsets.only(top: 260.0, left: 20, right: 20),
+              padding: EdgeInsets.only(top: 260.0, left: 20, right: 20),
               child: SizedBox(
                 height: double.infinity,
                 child: SingleChildScrollView(
@@ -46,13 +49,21 @@ class _SignInScreenState extends State<SignInScreen> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       TextFields(),
-                      const ForgotPassword(),
-                      const SizedBox(height: 20,),
-                      const SignInButton(),
-                      const SizedBox(height: 20,),
-                      const Separator(text: 'or sign in with',),
-                      const SizedBox(height: 20,),
-                      const ThirdParty(),
+                      ForgotPassword(),
+                      SizedBox(
+                        height: 20,
+                      ),
+                      SignInButton(),
+                      SizedBox(
+                        height: 20,
+                      ),
+                      Separator(
+                        text: 'or sign in with',
+                      ),
+                      SizedBox(
+                        height: 20,
+                      ),
+                      ThirdParty(),
                     ],
                   ),
                 ),

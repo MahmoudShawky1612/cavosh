@@ -23,8 +23,7 @@ class SignInHeaderButton extends StatelessWidget {
           children: [
             CustomButton(
               text: "Sign In",
-              onPressed: () {
-              },
+              onPressed: () {},
               topRight: 0,
               bottomRight: 0,
               color: AppColors.primary,
@@ -37,16 +36,15 @@ class SignInHeaderButton extends StatelessWidget {
                   PageRouteBuilder(
                     transitionDuration: const Duration(milliseconds: 500),
                     pageBuilder: (context, animation, secondaryAnimation) =>
-                    const SignUpScreen(),
+                        const SignUpScreen(),
                     transitionsBuilder:
                         (context, animation, secondaryAnimation, child) {
-                      const begin = Offset(1.0, 0.0); // Slide from right
+                      const begin = Offset(1.0, 0.0);
                       const end = Offset.zero;
                       const curve = Curves.easeInOut;
 
                       var tween = Tween(begin: begin, end: end)
                           .chain(CurveTween(curve: curve));
-
                       return SlideTransition(
                         position: animation.drive(tween),
                         child: child,
