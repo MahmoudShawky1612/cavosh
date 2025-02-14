@@ -23,8 +23,9 @@ class _CustomTextFieldState extends State<CustomTextField> {
     return  TextField(
       obscureText: widget.isPassword ? obscureText : false,
       decoration: InputDecoration(
-        border: const OutlineInputBorder(
-          borderSide: BorderSide.none,
+        border: OutlineInputBorder(
+          borderSide: const BorderSide(color: AppColors.primary, width: 0.5),
+          borderRadius: BorderRadius.circular(10),
         ),
 
         focusedBorder: OutlineInputBorder(
