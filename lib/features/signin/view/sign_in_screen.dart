@@ -30,7 +30,7 @@ class _SignInScreenState extends State<SignInScreen> {
           children: [
             CustomHeader(),
             CustomHeaderText(
-              text: "Let's get you signed in!s",
+              text: "Let's get you signed in!",
             ),
             SignInHeaderButton(),
             Padding(
