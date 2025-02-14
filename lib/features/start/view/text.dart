@@ -5,7 +5,7 @@ import '../../../core/utils/text.dart';
 import '../../../core/widgets/custom_button.dart';
 
 class ColumnObjects extends StatelessWidget {
-  const ColumnObjects({Key? key}) : super(key: key);
+  const ColumnObjects({super.key});
 
   @override
   Widget build(BuildContext context) {

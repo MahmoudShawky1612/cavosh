@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 
 class BackGroundImage extends StatelessWidget {
+  const BackGroundImage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Positioned(

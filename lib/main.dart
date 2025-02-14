@@ -1,8 +1,8 @@
+import 'package:cavosh/core/constants/colors.dart';
+import 'package:cavosh/features/main/view/main_screen.dart';
 import 'package:flutter/material.dart';
 
-import 'features/signin/view/sign_in_screen.dart';
 import 'features/signup/view/sign_up_screen.dart';
-import 'features/start/view/start_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,13 +11,14 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
+      theme: ThemeData(
+        primaryColor: AppColors.primary,
+      ),
       debugShowCheckedModeBanner: false,
-      home: SignUpScreen(),
+      home: const MainScreen(),
     );
   }
 }
-
