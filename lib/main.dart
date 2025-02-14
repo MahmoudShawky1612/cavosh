@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'features/signin/view/sign_in_screen.dart';
+import 'features/signup/view/sign_up_screen.dart';
 import 'features/start/view/start_screen.dart';
 
 void main() {
@@ -13,9 +14,9 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: SignInScreen(),
+      home: SignUpScreen(),
     );
   }
 }

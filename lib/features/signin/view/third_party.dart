@@ -9,43 +9,36 @@ class ThirdParty extends StatelessWidget{
 
   @override
   Widget build(BuildContext context) {
-   return Positioned(
-     top: 620,
-     left: 0,
-     right: 0,
-     child: Center(
-       child: Row(
-         mainAxisAlignment: MainAxisAlignment.center,
-         children: [
-           IconButton(
-             onPressed: () {},
-             icon: const FaIcon(
-               FontAwesomeIcons.facebook,
-               color: AppColors.blue,
-               size: 50,
-             ),
-           ),
-           const SizedBox(width: 20,),
-           IconButton(
-             onPressed: () {},
-             icon:  const FaIcon(
-               FontAwesomeIcons.apple,
-               color: AppColors.black,
-               size: 50,
-             ),
-           ),
-           const SizedBox(width: 20,),
-           IconButton(
-             onPressed: () {},
-             icon: const FaIcon(
-               FontAwesomeIcons.google,
-               color: Colors.red,
-               size: 50,
-             ),
-           ),
-         ],
+   return Row(
+     mainAxisAlignment: MainAxisAlignment.center,
+     children: [
+       IconButton(
+         onPressed: () {},
+         icon: const FaIcon(
+           FontAwesomeIcons.facebook,
+           color: AppColors.blue,
+           size: 50,
+         ),
        ),
-     ),
+       const SizedBox(width: 20,),
+       IconButton(
+         onPressed: () {},
+         icon:  const FaIcon(
+           FontAwesomeIcons.apple,
+           color: AppColors.black,
+           size: 50,
+         ),
+       ),
+       const SizedBox(width: 20,),
+       IconButton(
+         onPressed: () {},
+         icon: const FaIcon(
+           FontAwesomeIcons.google,
+           color: Colors.red,
+           size: 50,
+         ),
+       ),
+     ],
    );
   }
 

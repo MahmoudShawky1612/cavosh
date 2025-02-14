@@ -16,7 +16,7 @@ import '../../../core/utils/text.dart';
 import 'forgot_password.dart';
 import 'header_button.dart';
 
-class SignInScreen extends StatefulWidget {
+class SignInScreen extends StatefulWidget { 
   const SignInScreen({super.key});
 
   @override
@@ -37,11 +37,27 @@ class _SignInScreenState extends State<SignInScreen> {
             const CustomHeader(),
             const CustomHeaderText(text: "Let's get you signed in!s",),
             const SignInHeaderButton(),
-            TextFields(),
-            const ForgotPassword(),
-            const SignInButton(),
-            const Separator(),
-            const ThirdParty(),
+            Padding(
+              padding: const EdgeInsets.only(top: 260.0, left: 20, right: 20),
+              child: SizedBox(
+                height: double.infinity,
+                child: SingleChildScrollView(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      TextFields(),
+                      const ForgotPassword(),
+                      const SizedBox(height: 20,),
+                      const SignInButton(),
+                      const SizedBox(height: 20,),
+                      const Separator(text: 'or sign in with',),
+                      const SizedBox(height: 20,),
+                      const ThirdParty(),
+                    ],
+                  ),
+                ),
+              ),
+            )
           ],
         ),
       ),

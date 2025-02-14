@@ -8,9 +8,8 @@ class ForgotPassword extends StatelessWidget{
 
   @override
   Widget build(BuildContext context) {
-   return Positioned(
-     top: 420,
-     right: 30,
+   return Align(
+     alignment: Alignment.centerRight,
      child: Text(
        "Forgot Password?",
        style: AppTextStyles.small.copyWith(color: AppColors.primary),

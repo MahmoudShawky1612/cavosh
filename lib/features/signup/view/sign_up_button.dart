@@ -2,8 +2,8 @@ import 'package:flutter/cupertino.dart';
 
 import '../../../core/widgets/custom_button.dart';
 
-class SignInButton extends StatelessWidget {
-  const SignInButton({super.key});
+class SignUpButton extends StatelessWidget {
+  const SignUpButton({super.key});
 
 
   @override
@@ -12,6 +12,6 @@ class SignInButton extends StatelessWidget {
         alignment: Alignment.center ,
         child: SizedBox(
             width: 300,
-            child: CustomButton(text: "SIgn In", onPressed: (){})));
+            child: CustomButton(text: "SIgn Up", onPressed: (){})));
   }
 }
